@@ -53,6 +53,29 @@
         };
     };
 
+    macros {
+        parentness: parentness {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+            label = "PARENTNESS";
+        };
+
+        brackets: brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT_ARROW>;
+            label = "BRACKETS";
+        };
+
+        curly_brackets: curly_brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
+            label = "CURLY_BRACKETS";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -98,6 +121,33 @@
             >;
 
             display-name = "Adjust";
+        };
+
+        nums_and_fns {
+            bindings = <
+  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5                     &kp HOME   &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp PG_UP
+  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10                    &kp KP_N0  &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans
+  &kp F11  &kp F12  &trans  &trans  &trans                     &kp END    &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp PAGE_DOWN
+                            &trans  &trans   &trans    &trans  &trans     &trans
+            >;
+        };
+
+        navigation_media {
+            bindings = <
+  &trans  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT    &trans                    &trans  &kp PRINTSCREEN  &kp UP    &trans     &trans
+  &trans  &kp C_MUTE  &kp C_VOL_DN      &kp C_VOL_UP  &trans                    &trans  &kp LEFT         &kp DOWN  &kp RIGHT  &trans
+  &trans  &trans      &trans            &trans        &trans                    &trans  &trans           &trans    &trans     &trans
+                                        &trans        &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        symbols {
+            bindings = <
+  &trans  &kp EXCL       &kp AT_SIGN  &mt HASH RU_NUMERO  &kp DOLLAR                    &kp PRCNT  &kp CARET  &kp AMPERSAND  &kp ASTRK  &trans
+  &trans  &mt LPAR LPAR  &trans       &trans              &trans                        &trans     &trans     &trans         &trans     &trans
+  &trans  &trans         &trans       &trans              &trans                        &trans     &trans     &trans         &trans     &trans
+                                      &trans              &trans      &trans    &trans  &trans     &trans
+            >;
         };
     };
 };
