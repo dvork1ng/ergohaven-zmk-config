@@ -143,10 +143,10 @@
 
         symbols {
             bindings = <
-  &trans  &kp EXCL       &kp AT_SIGN  &mt HASH RU_NUMERO  &kp DOLLAR                    &kp PRCNT  &kp CARET  &kp AMPERSAND  &kp ASTRK  &trans
-  &trans  &mt LPAR LPAR  &trans       &trans              &trans                        &trans     &trans     &trans         &trans     &trans
-  &trans  &trans         &trans       &trans              &trans                        &trans     &trans     &trans         &trans     &trans
-                                      &trans              &trans      &trans    &trans  &trans     &trans
+  &trans  &kp EXCL          &kp AT_SIGN                     &mt HASH RU_NUMERO          &kp DOLLAR                                    &kp PRCNT          &kp CARET     &kp AMPERSAND  &kp ASTRK             &trans
+  &trans  &mt RPAR LPAR     &mt RIGHT_BRACKET LEFT_BRACKET  &mt RIGHT_BRACE LEFT_BRACE  &mt GREATER_THAN LESS_THAN                    &kp PLUS           &kp MINUS     &kp EQUAL      &kp QMARK             &trans
+  &trans  &mt RU_SEMI SEMI  &mt RU_COLON COLON              &mt GRAVE TILDE             &mt NUBS RU_BSLH                              &mt FSLH RU_SLASH  &kp KP_COMMA  &kp KP_DOT     &mt SINGLE_QUOTE DQT  &trans
+                                                            &trans                      &trans                      &trans    &trans  &trans             &trans
             >;
         };
     };
