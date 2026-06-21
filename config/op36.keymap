@@ -263,14 +263,14 @@
         to_en: to_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(SHIFT) &kp LC(SPACE) &to 0>;
+            bindings = <&kp LS(LALT) &kp LC(SPACE) &to 0>;
             label = "TO_EN";
         };
 
         to_ru: to_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(SHIFT) &kp LC(SPACE) &to 1>;
+            bindings = <&kp LS(LALT) &kp LC(SPACE) &to 1>;
             label = "TO_RU";
         };
     };
