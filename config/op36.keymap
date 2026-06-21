@@ -120,14 +120,16 @@
     combos {
         compatible = "zmk,combos";
 
-        kha {
-            bindings = <&kp LBKT>;
-            key-positions = <6 7>;
+        switch_to_en {
+            bindings = <&to_en>;
+            key-positions = <2 3>;
+            layers = <1>;
         };
 
-        hrdsgn {
-            bindings = <&kp RBKT>;
-            key-positions = <7 8>;
+        switch_to_ru {
+            bindings = <&to_ru>;
+            key-positions = <2 3>;
+            layers = <0>;
         };
     };
 
@@ -233,29 +235,43 @@
         space_comma_en: space_comma_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SPACE &kp COMMA>;
+            bindings = <&kp COMMA &kp SPACE>;
             label = "SPACE_COMMA_EN";
         };
 
         space_dot_en: space_dot_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SPACE &kp DOT>;
+            bindings = <&kp DOT &kp SPACE>;
             label = "SPACE_DOT_EN";
         };
 
         space_comma_ru: space_comma_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SPACE &kp RU_COMMA>;
+            bindings = <&kp RU_COMMA &kp SPACE>;
             label = "SPACE_COMMA_RU";
         };
 
         space_dot_ru: space_dot_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SPACE &kp RU_DOT>;
+            bindings = <&kp RU_DOT &kp SPACE>;
             label = "SPACE_DOT_RU";
+        };
+
+        to_en: to_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT &kp LALT &to 0>;
+            label = "TO_EN";
+        };
+
+        to_ru: to_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LSHFT &kp LEFT_ALT &to 1>;
+            label = "TO_RU";
         };
     };
 
