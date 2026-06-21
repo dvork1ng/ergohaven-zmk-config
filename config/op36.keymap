@@ -278,7 +278,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        en {
+        en_layout {
             bindings = <
   &kp Q        &kp W         &kp E              &kp R            &kp T                                &kp Y  &kp U            &kp I         &kp O         &kp P
   &hml LGUI A  &hml LCTRL S  &hml LEFT_SHIFT D  &hml LALT F      &kp G                                &kp H  &hmr LEFT_ALT J  &hmr LSHFT K  &hmr LCTRL L  &hmr LGUI ESCAPE
@@ -286,11 +286,11 @@
                                                 &lt 4 BACKSPACE  &mo 2      &space_en    &lt 6 ENTER  &mo 5  &kp TAB
             >;
 
-            display-name = "Base";
+            display-name = "en_layout";
         };
 
-        ru {
-            display-name = "Base";
+        ru_layout {
+            display-name = "ru_layout";
             bindings = <
   &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U           &kp RU_CYRILLIC_KA           &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                            &kp RU_CYRILLIC_EN  &mt RU_CYRILLIC_GHE RU_CYRILLIC_HA               &kp RU_CYRILLIC_SHA        &kp RU_CYRILLIC_SHCHA     &kp RU_CYRILLIC_ZE
   &hml LGUI RU_CYRILLIC_EF  &hml LCTRL RU_CYRILLIC_YERU  &hml LSHIFT RU_CYRILLIC_VE  &hml LEFT_ALT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                                           &kp RU_CYRILLIC_ER  &hmr LEFT_ALT RU_CYRILLIC_O                      &hmr LSHFT RU_CYRILLIC_EL  &mt LCTRL RU_CYRILLIC_DE  &mt LGUI RU_CYRILLIC_ZHE
