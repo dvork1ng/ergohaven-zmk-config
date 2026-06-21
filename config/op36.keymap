@@ -78,7 +78,7 @@
         function: function {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp F &kp U &kp N &kp C &kp T &kp I &kp O &kp N &kp SPACE &kp LPAR &kp RPAR &kp SPACE &kp LBRC &kp RET &kp RBRC &kp LEFT_ARROW &kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
+            bindings = <&none &kp F &kp U &kp N &kp C &kp T &kp I &kp O &kp N &kp SPACE &kp LPAR &kp RPAR &kp SPACE &kp LBRC &kp RET &kp LEFT_ARROW &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
             label = "FUNCTION";
         };
     };
