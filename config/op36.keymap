@@ -54,35 +54,35 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CTRL_1";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_1>, <&ctrl_one>;
+            bindings = <&kp N1>, <&ctrl_one>;
         };
 
         ctrl_2: ctrl_2 {
             compatible = "zmk,behavior-tap-dance";
             label = "CTRL_2";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_2>, <&ctrl_two>;
+            bindings = <&kp N2>, <&ctrl_two>;
         };
 
         ctrl_3: ctrl_3 {
             compatible = "zmk,behavior-tap-dance";
             label = "CTRL_3";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_3>, <&ctrl_three>;
+            bindings = <&kp N3>, <&ctrl_three>;
         };
 
         ctrl_4: ctrl_4 {
             compatible = "zmk,behavior-tap-dance";
             label = "CTRL_4";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_4>, <&ctrl_four>;
+            bindings = <&kp N4>, <&ctrl_four>;
         };
 
         ctrl_5: ctrl_5 {
             compatible = "zmk,behavior-tap-dance";
             label = "CTRL_5";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_5>, <&ctrl_five>;
+            bindings = <&kp N5>, <&ctrl_five>;
         };
 
         ctrl_6: ctrl_6 {
