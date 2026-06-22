@@ -115,6 +115,41 @@
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&space_comma_ru>, <&space_dot_ru>;
         };
+
+        en_curly_brackets: en_curly_brackets {
+            compatible = "zmk,behavior-tap-dance";
+            label = "EN_CURLY_BRACKETS";
+            #binding-cells = <0>;
+            bindings = <&en_curly_bracket_open>, <&en_curly_bracket_close>;
+        };
+
+        en_brackets: en_brackets {
+            compatible = "zmk,behavior-tap-dance";
+            label = "EN_BRACKETS";
+            #binding-cells = <0>;
+            bindings = <&en_bracket_open>, <&en_bracket_close>;
+        };
+
+        en_parentness: en_parentness {
+            compatible = "zmk,behavior-tap-dance";
+            label = "EN_PARENTNESS";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp RPAR>;
+        };
+
+        less_grater: less_grater {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LESS_GRATER";
+            #binding-cells = <0>;
+            bindings = <&kp LT>, <&kp GT>;
+        };
+
+        tilde_apos: tilde_apos {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TILDE_APOS";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE>, <&kp APOS>;
+        };
     };
 
     combos {
@@ -268,7 +303,7 @@
                 <&macro_wait_time 50>,
                 <&kp LC(SPACE)>,
                 <&macro_wait_time 50>,
-                <&to 0 &kp BACKSPACE>;
+                <&to 0>;
 
             label = "TO_EN";
         };
@@ -281,9 +316,51 @@
                 <&macro_wait_time 50>,
                 <&kp LC(SPACE)>,
                 <&macro_wait_time 50>,
-                <&to 1 &kp BACKSPACE>;
+                <&to 1>;
 
             label = "TO_RU";
+        };
+
+        single_quote: single_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sl 0 &kp APOSTROPHE>;
+            label = "SINGLE_QUOTE";
+        };
+
+        doble_quote: doble_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sl 0 &kp DOUBLE_QUOTES>;
+            label = "DOBLE_QUOTE";
+        };
+
+        en_curly_bracket_open: ru_curly_brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sl 0 &kp LEFT_BRACE>;
+            label = "RU_CURLY_BRACKETS";
+        };
+
+        en_curly_bracket_close: en_curly_bracket_close {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sl 0 &kp RIGHT_BRACE>;
+            label = "EN_CURLY_BRACKET_CLOSE";
+        };
+
+        en_bracket_open: ru_bracket_open {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sl 0 &kp LEFT_BRACKET>;
+            label = "RU_BRACKET_OPEN";
+        };
+
+        en_bracket_close: ru_bracket_close {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sl 0 &kp RIGHT_BRACKET>;
+            label = "RU_BRACKET_CLOSE";
         };
     };
 
@@ -293,7 +370,7 @@
         en_layout {
             bindings = <
   &kp Q        &kp W         &kp E              &kp R            &kp T                                &kp Y  &kp U            &kp I         &kp O         &kp P
-  &hml LGUI A  &hml LCTRL S  &hml LEFT_SHIFT D  &hml LALT F      &kp G                                &kp H  &hmr LEFT_ALT J  &hmr LSHFT K  &hmr LCTRL L  &hmr LGUI ESCAPE
+  &hml LGUI A  &hml LCTRL S  &hml LEFT_SHIFT D  &hml LALT F      &kp G                                &kp H  &hmr LEFT_ALT J  &hmr LSHFT K  &hmr LCTRL L  &hmr LGUI LEFT_GUI
   &kp Z        &kp X         &kp C              &kp V            &mt ESC B                            &kp N  &kp M            &none         &none         &none
                                                 &lt 4 BACKSPACE  &mo 2      &space_en    &lt 6 ENTER  &mo 5  &kp TAB
             >;
@@ -304,7 +381,7 @@
         ru_layout {
             display-name = "ru_layout";
             bindings = <
-  &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U           &kp RU_CYRILLIC_KA           &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                            &kp RU_CYRILLIC_EN  &mt RU_CYRILLIC_GHE RU_CYRILLIC_HA               &kp RU_CYRILLIC_SHA        &kp RU_CYRILLIC_SHCHA     &kp RU_CYRILLIC_ZE
+  &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U           &kp RU_CYRILLIC_KA           &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                            &kp RU_CYRILLIC_EN  &mt RU_CYRILLIC_HA RU_CYRILLIC_GHE               &kp RU_CYRILLIC_SHA        &kp RU_CYRILLIC_SHCHA     &kp RU_CYRILLIC_ZE
   &hml LGUI RU_CYRILLIC_EF  &hml LCTRL RU_CYRILLIC_YERU  &hml LSHIFT RU_CYRILLIC_VE  &hml LEFT_ALT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                                           &kp RU_CYRILLIC_ER  &hmr LEFT_ALT RU_CYRILLIC_O                      &hmr LSHFT RU_CYRILLIC_EL  &mt LCTRL RU_CYRILLIC_DE  &mt LGUI RU_CYRILLIC_ZHE
   &kp RU_CYRILLIC_YA        &kp RU_CYRILLIC_CHE          &kp RU_CYRILLIC_ES          &kp RU_CYRILLIC_EM           &mt ESC RU_CYRILLIC_I                                        &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE         &kp RU_CYRILLIC_YU        &kp RU_CYRILLIC_E
                                                                                      &lt 4 BACKSPACE              &mo 3                              &space_ru    &lt 6 ENTER  &mo 5               &kp TAB
@@ -313,19 +390,19 @@
 
         symbols_en {
             bindings = <
-  &none  &kp EXCL       &kp AT_SIGN                     &mt RU_NUMERO HASH          &kp DOLLAR                                  &kp PRCNT  &kp CARET  &kp AMPERSAND  &kp ASTRK             &none
-  &none  &mt RPAR LPAR  &mt RIGHT_BRACKET LEFT_BRACKET  &mt RIGHT_BRACE LEFT_BRACE  &mt GREATER_THAN LESS_THAN                  &kp PLUS   &kp MINUS  &kp EQUAL      &kp QMARK             &kp PIPE
-  &none  &kp SEMI       &kp COLON                       &mt GRAVE TILDE             &kp NUBS                                    &kp FSLH   &kp DOT    &kp COMMA      &mt SINGLE_QUOTE DQT  &none
-                                                        &none                       &none                       &none    &none  &none      &none
+  &kp UNDER  &kp EXCL     &kp AT_SIGN   &mt RU_NUMERO HASH  &kp DOLLAR                    &kp PRCNT  &kp CARET  &kp AMPERSAND  &kp ASTRK     &none
+  &none      &parentness  &en_brackets  &en_curly_brackets  &less_grater                  &kp PLUS   &kp MINUS  &kp EQUAL      &kp QMARK     &kp PIPE
+  &none      &kp SEMI     &kp COLON     &tilde_apos         &kp NUBS                      &kp FSLH   &kp DOT    &kp COMMA      &doble_quote  &single_quote
+                                        &none               &none         &none    &none  &none      &none
             >;
         };
 
         symbols_ru {
             bindings = <
-  &none  &kp EXCL       &kp AT_SIGN                     &mt RU_NUMERO HASH          &kp DOLLAR                                  &kp PRCNT     &kp CARET   &kp AMPERSAND  &kp ASTRK             &none
-  &none  &mt RPAR LPAR  &mt RIGHT_BRACKET LEFT_BRACKET  &mt RIGHT_BRACE LEFT_BRACE  &mt GREATER_THAN LESS_THAN                  &kp PLUS      &kp MINUS   &kp EQUAL      &kp QMARK             &kp PIPE
-  &none  &kp RU_SEMI    &kp RU_COLON                    &mt GRAVE TILDE             &kp RU_BACKSLASH                            &kp RU_SLASH  &kp RU_DOT  &kp RU_COMMA   &mt SINGLE_QUOTE DQT  &none
-                                                        &none                       &none                       &none    &none  &none         &none
+  &kp RU_UNDERSCORE  &kp EXCL     &kp AT_SIGN   &mt RU_NUMERO HASH  &kp DOLLAR                        &kp PRCNT     &kp CARET   &kp AMPERSAND  &kp ASTRK     &none
+  &none              &parentness  &en_brackets  &en_curly_brackets  &less_grater                      &kp PLUS      &kp MINUS   &kp EQUAL      &kp QMARK     &kp PIPE
+  &none              &kp RU_SEMI  &kp RU_COLON  &tilde_apos         &kp RU_BACKSLASH                  &kp RU_SLASH  &kp RU_DOT  &kp RU_COMMA   &doble_quote  &single_quote
+                                                &none               &none             &none    &none  &none         &none
             >;
         };
 
@@ -342,17 +419,17 @@
             bindings = <
   &none  &kp C_PREV  &kp C_PLAY_PAUSE     &kp C_NEXT    &none                        &none  &kp PRINTSCREEN  &kp UP    &none      &none
   &none  &kp C_MUTE  &mt LSHIFT C_VOL_DN  &kp C_VOL_UP  &none                        &none  &kp LEFT         &kp DOWN  &kp RIGHT  &none
-  &none  &none       &none                &none         &kp ESC                      &none  &kp HOME            &none     &kp END      &none
+  &none  &none       &none                &none         &kp ESC                      &none  &kp HOME         &none     &kp END    &none
                                           &none         &none    &kp SPACE    &none  &none  &none
             >;
         };
 
         macro_bt {
             bindings = <
-  &bt BT_CLR  &none        &none      &none            &none                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-  &none       &parentness  &brackets  &curly_brackets  &none                  &none         &function     &none         &none         &none
-  &none       &none        &none      &none            &none                  &none         &none         &none         &out OUT_USB  &out OUT_BLE
-                                      &none            &none  &none    &none  &none         &none
+  &bt BT_CLR  &none        &none      &none               &none                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+  &none       &parentness  &brackets  &en_curly_brackets  &none                  &none         &function     &none         &none         &none
+  &none       &none        &none      &none               &none                  &none         &none         &none         &out OUT_USB  &out OUT_BLE
+                                      &none               &none  &none    &none  &none         &none
             >;
         };
 
