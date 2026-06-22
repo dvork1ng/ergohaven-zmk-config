@@ -137,9 +137,9 @@
             bindings = <&kp LPAR>, <&kp RPAR>;
         };
 
-        less_grater: less_grater {
+        en_less_grater: en_less_grater {
             compatible = "zmk,behavior-tap-dance";
-            label = "LESS_GRATER";
+            label = "EN_LESS_GRATER";
             #binding-cells = <0>;
             bindings = <&kp LT>, <&kp GT>;
         };
@@ -390,17 +390,17 @@
 
         symbols_en {
             bindings = <
-  &kp UNDER  &kp EXCL     &kp AT_SIGN   &mt RU_NUMERO HASH  &kp DOLLAR                    &kp PRCNT  &kp CARET  &kp AMPERSAND  &kp ASTRK     &none
-  &none      &parentness  &en_brackets  &en_curly_brackets  &less_grater                  &kp PLUS   &kp MINUS  &kp EQUAL      &kp QMARK     &kp PIPE
-  &none      &kp SEMI     &kp COLON     &tilde_apos         &kp NUBS                      &kp FSLH   &kp DOT    &kp COMMA      &doble_quote  &single_quote
-                                        &none               &none         &none    &none  &none      &none
+  &kp UNDER  &kp EXCL     &kp AT_SIGN   &mt RU_NUMERO HASH  &kp DOLLAR                       &kp PRCNT  &kp CARET  &kp AMPERSAND  &kp ASTRK     &none
+  &none      &parentness  &en_brackets  &en_curly_brackets  &en_less_grater                  &kp PLUS   &kp MINUS  &kp EQUAL      &kp QMARK     &kp PIPE
+  &none      &kp SEMI     &kp COLON     &tilde_apos         &kp NUBS                         &kp FSLH   &kp DOT    &kp COMMA      &doble_quote  &single_quote
+                                        &none               &none            &none    &none  &none      &none
             >;
         };
 
         symbols_ru {
             bindings = <
   &kp RU_UNDERSCORE  &kp EXCL     &kp AT_SIGN   &mt RU_NUMERO HASH  &kp DOLLAR                        &kp PRCNT     &kp CARET   &kp AMPERSAND  &kp ASTRK     &none
-  &none              &parentness  &en_brackets  &en_curly_brackets  &less_grater                      &kp PLUS      &kp MINUS   &kp EQUAL      &kp QMARK     &kp PIPE
+  &none              &parentness  &en_brackets  &en_curly_brackets  &en_less_grater                   &kp PLUS      &kp MINUS   &kp EQUAL      &kp QMARK     &kp PIPE
   &none              &kp RU_SEMI  &kp RU_COLON  &tilde_apos         &kp RU_BACKSLASH                  &kp RU_SLASH  &kp RU_DOT  &kp RU_COMMA   &doble_quote  &single_quote
                                                 &none               &none             &none    &none  &none         &none
             >;
