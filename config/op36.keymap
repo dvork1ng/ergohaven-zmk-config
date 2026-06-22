@@ -116,39 +116,39 @@
             bindings = <&kp SPACE>, <&space_comma_ru>, <&space_dot_ru>;
         };
 
-        en_curly_brackets: en_curly_brackets {
+        b_en_curly_brackets: b_en_curly_brackets {
             compatible = "zmk,behavior-tap-dance";
-            label = "EN_CURLY_BRACKETS";
+            label = "B_EN_CURLY_BRACKETS";
             #binding-cells = <0>;
-            bindings = <&en_curly_bracket_open>, <&en_curly_bracket_close>;
+            bindings = <&m_en_curly_bracket_open>, <&m_en_curly_bracket_close>;
         };
 
-        en_brackets: en_brackets {
+        b_en_brackets: b_en_brackets {
             compatible = "zmk,behavior-tap-dance";
-            label = "EN_BRACKETS";
+            label = "B_EN_BRACKETS";
             #binding-cells = <0>;
-            bindings = <&en_bracket_open>, <&en_bracket_close>;
+            bindings = <&m_en_bracket_open>, <&m_en_bracket_close>;
         };
 
-        en_parentness: en_parentness {
+        b_en_parentness: b_en_parentness {
             compatible = "zmk,behavior-tap-dance";
-            label = "EN_PARENTNESS";
+            label = "B_EN_PARENTNESS";
             #binding-cells = <0>;
             bindings = <&kp LPAR>, <&kp RPAR>;
         };
 
-        en_less_grater: en_less_grater {
+        b_en_less_grater: b_en_less_grater {
             compatible = "zmk,behavior-tap-dance";
-            label = "EN_LESS_GRATER";
+            label = "B_EN_LESS_GRATER";
             #binding-cells = <0>;
             bindings = <&kp LT>, <&kp GT>;
         };
 
-        tilde_apos: tilde_apos {
+        b_tilde_apos: b_tilde_apos {
             compatible = "zmk,behavior-tap-dance";
-            label = "TILDE_APOS";
+            label = "B_TILDE_APOS";
             #binding-cells = <0>;
-            bindings = <&kp TILDE>, <&kp APOS>;
+            bindings = <&m_tilde>, <&m_apos>;
         };
     };
 
@@ -335,32 +335,46 @@
             label = "DOBLE_QUOTE";
         };
 
-        en_curly_bracket_open: ru_curly_brackets {
+        m_en_curly_bracket_open: ru_curly_brackets {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sl 0 &kp LEFT_BRACE>;
             label = "RU_CURLY_BRACKETS";
         };
 
-        en_curly_bracket_close: en_curly_bracket_close {
+        m_en_curly_bracket_close: m_en_curly_bracket_close {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sl 0 &kp RIGHT_BRACE>;
-            label = "EN_CURLY_BRACKET_CLOSE";
+            label = "M_EN_CURLY_BRACKET_CLOSE";
         };
 
-        en_bracket_open: ru_bracket_open {
+        m_en_bracket_open: ru_bracket_open {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sl 0 &kp LEFT_BRACKET>;
             label = "RU_BRACKET_OPEN";
         };
 
-        en_bracket_close: ru_bracket_close {
+        m_en_bracket_close: ru_bracket_close {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&sl 0 &kp RIGHT_BRACKET>;
             label = "RU_BRACKET_CLOSE";
+        };
+
+        m_tilde: m_tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sl 0 &kp TILDE>;
+            label = "M_TILDE";
+        };
+
+        m_apos: m_apos {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sl 0 &kp APOSTROPHE>;
+            label = "M_APOS";
         };
     };
 
@@ -390,19 +404,19 @@
 
         symbols_en {
             bindings = <
-  &kp UNDER  &kp EXCL     &kp AT_SIGN   &mt RU_NUMERO HASH  &kp DOLLAR                       &kp PRCNT  &kp CARET  &kp AMPERSAND  &kp ASTRK     &none
-  &none      &parentness  &en_brackets  &en_curly_brackets  &en_less_grater                  &kp PLUS   &kp MINUS  &kp EQUAL      &kp QMARK     &kp PIPE
-  &none      &kp SEMI     &kp COLON     &tilde_apos         &kp NUBS                         &kp FSLH   &kp DOT    &kp COMMA      &doble_quote  &single_quote
-                                        &none               &none            &none    &none  &none      &none
+  &kp UNDER  &kp EXCL          &kp AT_SIGN     &mt RU_NUMERO HASH    &kp DOLLAR                         &kp PRCNT  &kp CARET  &kp AMPERSAND  &kp ASTRK     &none
+  &none      &b_en_parentness  &b_en_brackets  &b_en_curly_brackets  &b_en_less_grater                  &kp PLUS   &kp MINUS  &kp EQUAL      &kp QMARK     &kp PIPE
+  &none      &kp SEMI          &kp COLON       &b_tilde_apos         &kp NUBS                           &kp FSLH   &kp DOT    &kp COMMA      &doble_quote  &single_quote
+                                               &none                 &none              &none    &none  &none      &none
             >;
         };
 
         symbols_ru {
             bindings = <
-  &kp RU_UNDERSCORE  &kp EXCL     &kp AT_SIGN   &mt RU_NUMERO HASH  &kp DOLLAR                        &kp PRCNT     &kp CARET   &kp AMPERSAND  &kp ASTRK     &none
-  &none              &parentness  &en_brackets  &en_curly_brackets  &en_less_grater                   &kp PLUS      &kp MINUS   &kp EQUAL      &kp QMARK     &kp PIPE
-  &none              &kp RU_SEMI  &kp RU_COLON  &tilde_apos         &kp RU_BACKSLASH                  &kp RU_SLASH  &kp RU_DOT  &kp RU_COMMA   &doble_quote  &single_quote
-                                                &none               &none             &none    &none  &none         &none
+  &kp RU_UNDERSCORE  &kp EXCL          &kp AT_SIGN     &mt RU_NUMERO HASH    &kp DOLLAR                         &kp PRCNT     &kp CARET   &kp AMPERSAND  &kp ASTRK     &none
+  &none              &b_en_parentness  &b_en_brackets  &b_en_curly_brackets  &b_en_less_grater                  &kp PLUS      &kp MINUS   &kp EQUAL      &kp QMARK     &kp PIPE
+  &none              &kp RU_SEMI       &kp RU_COLON    &b_tilde_apos         &kp RU_BACKSLASH                   &kp RU_SLASH  &kp RU_DOT  &kp RU_COMMA   &doble_quote  &single_quote
+                                                       &none                 &none              &none    &none  &none         &none
             >;
         };
 
@@ -426,10 +440,10 @@
 
         macro_bt {
             bindings = <
-  &bt BT_CLR  &none        &none      &none               &none                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-  &none       &parentness  &brackets  &en_curly_brackets  &none                  &none         &function     &none         &none         &none
-  &none       &none        &none      &none               &none                  &none         &none         &none         &out OUT_USB  &out OUT_BLE
-                                      &none               &none  &none    &none  &none         &none
+  &bt BT_CLR  &none        &none      &none                 &none                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+  &none       &parentness  &brackets  &b_en_curly_brackets  &none                  &none         &function     &none         &none         &none
+  &none       &none        &none      &none                 &none                  &none         &none         &none         &out OUT_USB  &out OUT_BLE
+                                      &none                 &none  &none    &none  &none         &none
             >;
         };
 
