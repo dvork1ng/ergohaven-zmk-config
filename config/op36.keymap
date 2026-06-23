@@ -120,7 +120,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "B_EN_CURLY_BRACKETS";
             #binding-cells = <0>;
-            bindings = <&m_en_curly_bracket_open>, <&m_en_curly_bracket_close>;
+            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
         };
 
         b_en_brackets: b_en_brackets {
@@ -156,6 +156,13 @@
             label = "B_HASH_NUMERO";
             #binding-cells = <0>;
             bindings = <&m_en_hash>, <&m_ru_numero>;
+        };
+
+        b_ru_curly_brackets: b_ru_curly_brackets {
+            compatible = "zmk,behavior-tap-dance";
+            label = "B_RU_CURLY_BRACKETS";
+            #binding-cells = <0>;
+            bindings = <&m_en_curly_bracket_open>, <&m_en_curly_bracket_close>;
         };
     };
 
@@ -432,6 +439,13 @@
             bindings = <&sl 0 &kp PIPE>;
             label = "M_PIPE";
         };
+
+        ru_m_double_quote: ru_m_double_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &kp APOSTROPHE &to 1>;
+            label = "RU_M_DOUBLE_QUOTE";
+        };
     };
 
     keymap {
@@ -470,7 +484,7 @@
         symbols_ru {
             bindings = <
   &kp RU_UNDERSCORE  &kp EXCL          &m_at           &b_hash_numero        &m_dollar                          &kp PRCNT     &m_caret    &m_amp        &kp ASTRK        &none
-  &none              &b_en_parentness  &b_en_brackets  &b_en_curly_brackets  &b_en_less_grater                  &kp PLUS      &kp MINUS   &kp EQUAL     &kp RU_QUESTION  &m_pipe
+  &none              &b_en_parentness  &b_en_brackets  &b_ru_curly_brackets  &b_en_less_grater                  &kp PLUS      &kp MINUS   &kp EQUAL     &kp RU_QUESTION  &m_pipe
   &none              &kp RU_SEMI       &kp RU_COLON    &b_tilde_apos         &kp RU_BACKSLASH                   &kp RU_SLASH  &kp RU_DOT  &kp RU_COMMA  &m_double_quote  &m_single_quote
                                                        &none                 &none              &none    &none  &none         &none
             >;
