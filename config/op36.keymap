@@ -235,7 +235,7 @@
         function: function {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp F &kp U &kp N &kp C &kp T &kp I &kp O &kp N &kp SPACE &kp LPAR &kp RPAR &kp SPACE &kp LBRC &kp RET &kp LEFT_ARROW &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
+            bindings = <&kp F &kp U &kp N &kp C &kp T &kp I &kp O &kp N &kp SPACE &kp LPAR &kp RPAR &kp SPACE &kp LBRC &kp RET &kp LEFT_ARROW &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
             label = "FUNCTION";
         };
 
@@ -340,26 +340,14 @@
         to_en: to_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LS(LALT)>,
-                <&macro_wait_time 50>,
-                <&kp LC(SPACE)>,
-                <&macro_wait_time 50>,
-                <&to 0>;
-
+            bindings = <&kp LS(LALT) &to 0>;
             label = "TO_EN";
         };
 
         to_ru: to_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp LS(LALT)>,
-                <&macro_wait_time 50>,
-                <&kp LC(SPACE)>,
-                <&macro_wait_time 50>,
-                <&to 1>;
-
+            bindings = <&kp LS(LALT) &to 1>;
             label = "TO_RU";
         };
 
@@ -509,17 +497,17 @@
 
         symbols_en {
             bindings = <
-  &kp UNDER  &kp EXCL          &kp AT_SIGN     &b_hash_numero        &kp DOLLAR                         &kp PRCNT  &kp CARET  &kp AMPERSAND  &kp ASTRK          &none
-  &none      &b_en_parentness  &b_en_brackets  &b_en_curly_brackets  &b_en_less_grater                  &kp PLUS   &kp MINUS  &kp EQUAL      &kp QMARK          &kp PIPE
-  &none      &kp SEMI          &kp COLON       &b_en_tilde_grave     &kp BSLH                           &kp FSLH   &kp DOT    &kp COMMA      &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE
-                                               &none                 &none              &none    &none  &none      &none
+  &kp UNDER     &kp EXCL          &kp AT_SIGN     &kp HASH              &kp DOLLAR                         &kp PRCNT  &kp CARET  &kp AMPERSAND  &kp ASTRK          &none
+  &m_en_numero  &b_en_parentness  &b_en_brackets  &b_en_curly_brackets  &b_en_less_grater                  &kp PLUS   &kp MINUS  &kp EQUAL      &kp QMARK          &kp PIPE
+  &none         &kp SEMI          &kp COLON       &b_en_tilde_grave     &kp BSLH                           &kp FSLH   &kp DOT    &kp COMMA      &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE
+                                                  &none                 &none              &none    &none  &none      &none
             >;
         };
 
         symbols_ru {
             bindings = <
-  &kp RU_UNDERSCORE  &kp EXCL          &m_ru_at        &b_hash_numero        &m_ru_dollar                        &kp PRCNT     &m_ru_caret  &m_ru_amp     &kp ASTRK           &none
-  &none              &b_en_parentness  &b_ru_brackets  &b_ru_curly_brackets  &b_ru_less_greater                  &kp PLUS      &kp MINUS    &kp EQUAL     &kp RU_QUESTION     &m_ru_pipe
+  &kp RU_UNDERSCORE  &kp EXCL          &m_ru_at        &m_ru_hash            &m_ru_dollar                        &kp PRCNT     &m_ru_caret  &m_ru_amp     &kp ASTRK           &none
+  &kp RU_NUMERO      &b_en_parentness  &b_ru_brackets  &b_ru_curly_brackets  &b_ru_less_greater                  &kp PLUS      &kp MINUS    &kp EQUAL     &kp RU_QUESTION     &m_ru_pipe
   &none              &kp RU_SEMI       &kp RU_COLON    &b_ru_tilde_grave     &kp RU_BACKSLASH                    &kp RU_SLASH  &kp RU_DOT   &kp RU_COMMA  &m_ru_double_quote  &m_ru_single_quote
                                                        &none                 &none               &none    &none  &none         &none
             >;
