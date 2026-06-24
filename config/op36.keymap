@@ -127,7 +127,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "B_EN_BRACKETS";
             #binding-cells = <0>;
-            bindings = <&m_en_bracket_open>, <&m_en_bracket_close>;
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
         };
 
         b_en_parentness: b_en_parentness {
@@ -144,25 +144,53 @@
             bindings = <&kp LT>, <&kp GT>;
         };
 
-        b_tilde_apos: b_tilde_apos {
+        b_ru_tilde_grave: b_ru_tilde_grave {
             compatible = "zmk,behavior-tap-dance";
-            label = "B_TILDE_APOS";
+            label = "B_RU_TILDE_GRAVE";
             #binding-cells = <0>;
-            bindings = <&m_tilde>, <&m_apos>;
+            bindings = <&m_ru_tilde>, <&m_ru_grave>;
         };
 
         b_hash_numero: b_hash_numero {
             compatible = "zmk,behavior-tap-dance";
             label = "B_HASH_NUMERO";
             #binding-cells = <0>;
-            bindings = <&m_en_hash>, <&m_ru_numero>;
+            bindings = <&m_ru_hash>, <&m_en_numero>;
         };
 
         b_ru_curly_brackets: b_ru_curly_brackets {
             compatible = "zmk,behavior-tap-dance";
             label = "B_RU_CURLY_BRACKETS";
             #binding-cells = <0>;
-            bindings = <&m_en_curly_bracket_open>, <&m_en_curly_bracket_close>;
+            bindings = <&m_ru_curly_bracket_open>, <&m_ru_curly_bracket_close>;
+        };
+
+        b_ru_brackets: b_ru_brackets {
+            compatible = "zmk,behavior-tap-dance";
+            label = "B_RU_BRACKETS";
+            #binding-cells = <0>;
+            bindings = <&m_ru_bracket_open>, <&m_ru_bracket_close>;
+        };
+
+        b_ru_parentness: b_ru_parentness {
+            compatible = "zmk,behavior-tap-dance";
+            label = "B_RU_PARENTNESS";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp RPAR>;
+        };
+
+        b_ru_less_greater: b_ru_less_greater {
+            compatible = "zmk,behavior-tap-dance";
+            label = "B_RU_LESS_GREATER";
+            #binding-cells = <0>;
+            bindings = <&m_ru_less>, <&m_ru_grater>;
+        };
+
+        b_en_tilde_grave: b_en_tilde_grave {
+            compatible = "zmk,behavior-tap-dance";
+            label = "B_EN_TILDE_GRAVE";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE>, <&kp GRAVE>;
         };
     };
 
@@ -335,116 +363,123 @@
             label = "TO_RU";
         };
 
-        m_single_quote: m_single_quote {
+        m_ru_single_quote: m_single_quote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sl 0 &kp APOSTROPHE>;
+            bindings = <&to_en &kp APOSTROPHE &to_ru>;
             label = "M_SINGLE_QUOTE";
         };
 
-        m_double_quote: m_double_quote {
+        m_ru_double_quote: m_double_quote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sl 0 &kp DOUBLE_QUOTES>;
+            bindings = <&to_en &kp DOUBLE_QUOTES &to_ru>;
             label = "M_DOUBLE_QUOTE";
         };
 
-        m_en_curly_bracket_open: ru_curly_brackets {
+        m_ru_curly_bracket_open: ru_curly_brackets {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sl 0 &kp LEFT_BRACE>;
+            bindings = <&to_en &kp LEFT_BRACE &to_ru>;
             label = "RU_CURLY_BRACKETS";
         };
 
-        m_en_curly_bracket_close: m_en_curly_bracket_close {
+        m_ru_curly_bracket_close: m_en_curly_bracket_close {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sl 0 &kp RIGHT_BRACE>;
+            bindings = <&to_en &kp RIGHT_BRACE &to_ru>;
             label = "M_EN_CURLY_BRACKET_CLOSE";
         };
 
-        m_en_bracket_open: ru_bracket_open {
+        m_ru_bracket_open: ru_bracket_open {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sl 0 &kp LEFT_BRACKET>;
+            bindings = <&to_en &kp LEFT_BRACKET &to_ru>;
             label = "RU_BRACKET_OPEN";
         };
 
-        m_en_bracket_close: ru_bracket_close {
+        m_ru_bracket_close: ru_bracket_close {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sl 0 &kp RIGHT_BRACKET>;
+            bindings = <&to_en &kp RIGHT_BRACKET &to_ru>;
             label = "RU_BRACKET_CLOSE";
         };
 
-        m_tilde: m_tilde {
+        m_ru_tilde: m_tilde {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sl 0 &kp TILDE>;
+            bindings = <&to_en &kp TILDE &to_ru>;
             label = "M_TILDE";
         };
 
-        m_apos: m_apos {
+        m_ru_grave: m_apos {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sl 0 &kp APOSTROPHE>;
+            bindings = <&to_en &kp GRAVE &to_ru>;
             label = "M_APOS";
         };
 
-        m_en_hash: m_en_hash {
+        m_ru_hash: m_en_hash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sl 0 &kp HASH>;
+            bindings = <&to_ru &kp HASH &to_en>;
             label = "M_EN_HASH";
         };
 
-        m_ru_numero: m_ru_numero {
+        m_en_numero: m_en_numero {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sl 1 &kp RU_NUMERO>;
-            label = "M_RU_NUMERO";
+            bindings = <&to_ru &kp RU_NUMERO &to_en>;
+            label = "M_EN_NUMERO";
         };
 
-        m_at: m_at {
+        m_ru_at: m_at {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sl 0 &kp AT_SIGN>;
+            bindings = <&to_en &kp AT_SIGN &to_ru>;
             label = "M_AT";
         };
 
-        m_amp: m_amp {
+        m_ru_amp: m_amp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sl 0 &kp AMPERSAND>;
+            bindings = <&to_en &kp AMPERSAND &to_ru>;
             label = "M_AMP";
         };
 
-        m_caret: m_caret {
+        m_ru_caret: m_caret {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sl 0 &kp CARET>;
+            bindings = <&to_en &kp CARET &to_ru>;
             label = "M_CARET";
         };
 
-        m_dollar: m_dollar {
+        m_ru_dollar: m_ru_dollar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sl 0 &kp DOLLAR>;
-            label = "M_DOLLAR";
+            bindings = <&to_en &kp DOLLAR &to_ru>;
+            label = "M_RU_DOLLAR";
         };
 
-        m_pipe: m_pipe {
+        m_ru_pipe: m_ru_pipe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sl 0 &kp PIPE>;
-            label = "M_PIPE";
+            bindings = <&to_en &kp PIPE &to_ru>;
+            label = "M_RU_PIPE";
         };
 
-        ru_m_double_quote: ru_m_double_quote {
+        m_ru_grater: m_ru_grater {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &kp APOSTROPHE &to 1>;
-            label = "RU_M_DOUBLE_QUOTE";
+            bindings = <&to_en &kp GREATER_THAN &to_ru>;
+            label = "M_RU_GRATER";
+        };
+
+        m_ru_less: b_less_than {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en &kp LESS_THAN &to_ru>;
+            label = "B_LESS_THAN";
         };
     };
 
@@ -474,19 +509,19 @@
 
         symbols_en {
             bindings = <
-  &kp UNDER  &kp EXCL          &kp AT_SIGN     &b_hash_numero        &kp DOLLAR                         &kp PRCNT  &kp CARET  &kp AMPERSAND  &kp ASTRK        &none
-  &none      &b_en_parentness  &b_en_brackets  &b_en_curly_brackets  &b_en_less_grater                  &kp PLUS   &kp MINUS  &kp EQUAL      &kp QMARK        &kp PIPE
-  &none      &kp SEMI          &kp COLON       &b_tilde_apos         &kp BSLH                           &kp FSLH   &kp DOT    &kp COMMA      &m_double_quote  &m_single_quote
+  &kp UNDER  &kp EXCL          &kp AT_SIGN     &b_hash_numero        &kp DOLLAR                         &kp PRCNT  &kp CARET  &kp AMPERSAND  &kp ASTRK          &none
+  &none      &b_en_parentness  &b_en_brackets  &b_en_curly_brackets  &b_en_less_grater                  &kp PLUS   &kp MINUS  &kp EQUAL      &kp QMARK          &kp PIPE
+  &none      &kp SEMI          &kp COLON       &b_en_tilde_grave     &kp BSLH                           &kp FSLH   &kp DOT    &kp COMMA      &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE
                                                &none                 &none              &none    &none  &none      &none
             >;
         };
 
         symbols_ru {
             bindings = <
-  &kp RU_UNDERSCORE  &kp EXCL          &m_at           &b_hash_numero        &m_dollar                          &kp PRCNT     &m_caret    &m_amp        &kp ASTRK        &none
-  &none              &b_en_parentness  &b_en_brackets  &b_ru_curly_brackets  &b_en_less_grater                  &kp PLUS      &kp MINUS   &kp EQUAL     &kp RU_QUESTION  &m_pipe
-  &none              &kp RU_SEMI       &kp RU_COLON    &b_tilde_apos         &kp RU_BACKSLASH                   &kp RU_SLASH  &kp RU_DOT  &kp RU_COMMA  &m_double_quote  &m_single_quote
-                                                       &none                 &none              &none    &none  &none         &none
+  &kp RU_UNDERSCORE  &kp EXCL          &m_ru_at        &b_hash_numero        &m_ru_dollar                        &kp PRCNT     &m_ru_caret  &m_ru_amp     &kp ASTRK           &none
+  &none              &b_en_parentness  &b_ru_brackets  &b_ru_curly_brackets  &b_ru_less_greater                  &kp PLUS      &kp MINUS    &kp EQUAL     &kp RU_QUESTION     &m_ru_pipe
+  &none              &kp RU_SEMI       &kp RU_COLON    &b_ru_tilde_grave     &kp RU_BACKSLASH                    &kp RU_SLASH  &kp RU_DOT   &kp RU_COMMA  &m_ru_double_quote  &m_ru_single_quote
+                                                       &none                 &none               &none    &none  &none         &none
             >;
         };
 
