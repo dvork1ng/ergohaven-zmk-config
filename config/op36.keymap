@@ -130,9 +130,9 @@
             bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
         };
 
-        b_en_parentness: b_en_parentness {
+        b_parentness: b_parentness {
             compatible = "zmk,behavior-tap-dance";
-            label = "B_EN_PARENTNESS";
+            label = "B_PARENTNESS";
             #binding-cells = <0>;
             bindings = <&kp LPAR>, <&kp RPAR>;
         };
@@ -151,13 +151,6 @@
             bindings = <&m_ru_tilde>, <&m_ru_grave>;
         };
 
-        b_hash_numero: b_hash_numero {
-            compatible = "zmk,behavior-tap-dance";
-            label = "B_HASH_NUMERO";
-            #binding-cells = <0>;
-            bindings = <&m_ru_hash>, <&m_en_numero>;
-        };
-
         b_ru_curly_brackets: b_ru_curly_brackets {
             compatible = "zmk,behavior-tap-dance";
             label = "B_RU_CURLY_BRACKETS";
@@ -170,13 +163,6 @@
             label = "B_RU_BRACKETS";
             #binding-cells = <0>;
             bindings = <&m_ru_bracket_open>, <&m_ru_bracket_close>;
-        };
-
-        b_ru_parentness: b_ru_parentness {
-            compatible = "zmk,behavior-tap-dance";
-            label = "B_RU_PARENTNESS";
-            #binding-cells = <0>;
-            bindings = <&kp LPAR>, <&kp RPAR>;
         };
 
         b_ru_less_greater: b_ru_less_greater {
@@ -497,19 +483,19 @@
 
         symbols_en {
             bindings = <
-  &kp UNDER     &kp EXCL          &kp AT_SIGN     &kp HASH              &kp DOLLAR                         &kp PRCNT  &kp CARET  &kp AMPERSAND  &kp ASTRK          &none
-  &m_en_numero  &b_en_parentness  &b_en_brackets  &b_en_curly_brackets  &b_en_less_grater                  &kp PLUS   &kp MINUS  &kp EQUAL      &kp QMARK          &kp PIPE
-  &none         &kp SEMI          &kp COLON       &b_en_tilde_grave     &kp BSLH                           &kp FSLH   &kp DOT    &kp COMMA      &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE
-                                                  &none                 &none              &none    &none  &none      &none
+  &kp UNDER     &kp EXCL       &kp AT_SIGN     &kp HASH              &kp DOLLAR                         &kp PRCNT  &kp CARET  &kp AMPERSAND  &kp ASTRK          &none
+  &m_en_numero  &b_parentness  &b_en_brackets  &b_en_curly_brackets  &b_en_less_grater                  &kp PLUS   &kp MINUS  &kp EQUAL      &kp QMARK          &kp PIPE
+  &none         &kp SEMI       &kp COLON       &b_en_tilde_grave     &kp BSLH                           &kp FSLH   &kp DOT    &kp COMMA      &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE
+                                               &none                 &none              &none    &none  &none      &none
             >;
         };
 
         symbols_ru {
             bindings = <
-  &kp RU_UNDERSCORE  &kp EXCL          &m_ru_at        &m_ru_hash            &m_ru_dollar                        &kp PRCNT     &m_ru_caret  &m_ru_amp     &kp ASTRK           &none
-  &kp RU_NUMERO      &b_en_parentness  &b_ru_brackets  &b_ru_curly_brackets  &b_ru_less_greater                  &kp PLUS      &kp MINUS    &kp EQUAL     &kp RU_QUESTION     &m_ru_pipe
-  &none              &kp RU_SEMI       &kp RU_COLON    &b_ru_tilde_grave     &kp RU_BACKSLASH                    &kp RU_SLASH  &kp RU_DOT   &kp RU_COMMA  &m_ru_double_quote  &m_ru_single_quote
-                                                       &none                 &none               &none    &none  &none         &none
+  &kp RU_UNDERSCORE  &kp EXCL       &m_ru_at        &m_ru_hash            &m_ru_dollar                        &kp PRCNT     &m_ru_caret  &m_ru_amp     &kp ASTRK           &none
+  &kp RU_NUMERO      &b_parentness  &b_ru_brackets  &b_ru_curly_brackets  &b_ru_less_greater                  &kp PLUS      &kp MINUS    &kp EQUAL     &kp RU_QUESTION     &m_ru_pipe
+  &none              &kp RU_SEMI    &kp RU_COLON    &b_ru_tilde_grave     &kp RU_BACKSLASH                    &kp RU_SLASH  &kp RU_DOT   &kp RU_COMMA  &m_ru_double_quote  &m_ru_single_quote
+                                                    &none                 &none               &none    &none  &none         &none
             >;
         };
 
