@@ -340,119 +340,119 @@
         m_ru_single_quote: m_single_quote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to_en &kp APOSTROPHE &to_ru>;
+            bindings = <&kp LS(LEFT_ALT) &kp APOSTROPHE &kp LS(LALT)>;
             label = "M_SINGLE_QUOTE";
         };
 
         m_ru_double_quote: m_double_quote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to_en &kp DOUBLE_QUOTES &to_ru>;
+            bindings = <&kp LS(LEFT_ALT) &kp DOUBLE_QUOTES &kp LS(LEFT_ALT)>;
             label = "M_DOUBLE_QUOTE";
         };
 
         m_ru_curly_bracket_open: ru_curly_brackets {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to_en &kp LEFT_BRACE &to_ru>;
+            bindings = <&kp LS(LEFT_ALT) &kp LEFT_BRACE &kp LS(LALT)>;
             label = "RU_CURLY_BRACKETS";
         };
 
         m_ru_curly_bracket_close: m_en_curly_bracket_close {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to_en &kp RIGHT_BRACE &to_ru>;
+            bindings = <&kp LS(LALT) &kp RIGHT_BRACE &kp LS(LALT)>;
             label = "M_EN_CURLY_BRACKET_CLOSE";
         };
 
         m_ru_bracket_open: ru_bracket_open {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to_en &kp LEFT_BRACKET &to_ru>;
+            bindings = <&kp LS(LALT) &kp LEFT_BRACKET &kp LS(LALT)>;
             label = "RU_BRACKET_OPEN";
         };
 
         m_ru_bracket_close: ru_bracket_close {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to_en &kp RIGHT_BRACKET &to_ru>;
+            bindings = <&kp LS(LALT) &kp RIGHT_BRACKET &kp LS(LALT)>;
             label = "RU_BRACKET_CLOSE";
         };
 
         m_ru_tilde: m_tilde {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to_en &kp TILDE &to_ru>;
+            bindings = <&kp LS(LEFT_ALT) &kp TILDE &kp LS(LEFT_ALT)>;
             label = "M_TILDE";
         };
 
         m_ru_grave: m_apos {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to_en &kp GRAVE &to_ru>;
+            bindings = <&kp LS(LALT) &kp GRAVE &kp LS(LEFT_ALT)>;
             label = "M_APOS";
         };
 
         m_ru_hash: m_en_hash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to_ru &kp HASH &to_en>;
+            bindings = <&kp LS(LEFT_ALT) &kp HASH &kp LS(LALT)>;
             label = "M_EN_HASH";
         };
 
         m_en_numero: m_en_numero {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to_ru &kp RU_NUMERO &to_en>;
+            bindings = <&kp LS(LALT) &kp RU_NUMERO &kp LS(LALT)>;
             label = "M_EN_NUMERO";
         };
 
         m_ru_at: m_at {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to_en &kp AT_SIGN &to_ru>;
+            bindings = <&kp LS(LALT) &kp AT_SIGN &kp LS(LALT)>;
             label = "M_AT";
         };
 
         m_ru_amp: m_amp {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to_en &kp AMPERSAND &to_ru>;
+            bindings = <&kp LS(LEFT_ALT) &kp AMPERSAND &kp LS(LALT)>;
             label = "M_AMP";
         };
 
         m_ru_caret: m_caret {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to_en &kp CARET &to_ru>;
+            bindings = <&kp LS(LEFT_ALT) &kp CARET &kp LS(LEFT_ALT)>;
             label = "M_CARET";
         };
 
         m_ru_dollar: m_ru_dollar {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to_en &kp DOLLAR &to_ru>;
+            bindings = <&kp LS(LEFT_ALT) &kp DOLLAR &kp LS(LALT)>;
             label = "M_RU_DOLLAR";
         };
 
         m_ru_pipe: m_ru_pipe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to_en &kp PIPE &to_ru>;
+            bindings = <&kp LS(LEFT_ALT) &kp PIPE &kp LS(LEFT_ALT)>;
             label = "M_RU_PIPE";
         };
 
         m_ru_grater: m_ru_grater {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to_en &kp GREATER_THAN &to_ru>;
+            bindings = <&kp LS(LALT) &kp GREATER_THAN &kp LS(LEFT_ALT)>;
             label = "M_RU_GRATER";
         };
 
         m_ru_less: b_less_than {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to_en &kp LESS_THAN &to_ru>;
+            bindings = <&kp LS(LALT) &kp LESS_THAN &kp LS(LEFT_ALT)>;
             label = "B_LESS_THAN";
         };
     };
