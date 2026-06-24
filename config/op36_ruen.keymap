@@ -1,15 +1,8 @@
 #include "keys_ru.h"
-#include "keys_ru.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-
-&mt {
-    quick-tap-ms = <200>;
-    flavor = "tap-preferred";
-    require-prior-idle-ms = <125>;
-};
 
 / {
     behaviors {
@@ -38,156 +31,521 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
             hold-trigger-on-release;
         };
+
+        ctrl_1: ctrl_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_1";
+            #binding-cells = <0>;
+            bindings = <&kp N1>, <&ctrl_one>;
+        };
+
+        ctrl_2: ctrl_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_2";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&ctrl_two>;
+        };
+
+        ctrl_3: ctrl_3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_3";
+            #binding-cells = <0>;
+            bindings = <&kp N3>, <&ctrl_three>;
+        };
+
+        ctrl_4: ctrl_4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_4";
+            #binding-cells = <0>;
+            bindings = <&kp N4>, <&ctrl_four>;
+        };
+
+        ctrl_5: ctrl_5 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_5";
+            #binding-cells = <0>;
+            bindings = <&kp N5>, <&ctrl_five>;
+        };
+
+        ctrl_6: ctrl_6 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_6";
+            #binding-cells = <0>;
+            bindings = <&kp N6>, <&ctrl_six>;
+        };
+
+        ctrl_7: ctrl_7 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_7";
+            #binding-cells = <0>;
+            bindings = <&kp N7>, <&ctrl_seven>;
+        };
+
+        ctrl_8: ctrl_8 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_8";
+            #binding-cells = <0>;
+            bindings = <&kp N8>, <&ctrl_eight>;
+        };
+
+        ctrl_9: ctrl_9 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_9";
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&ctrl_nine>;
+        };
+
+        ctrl_0: ctrl_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_0";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&ctrl_zero>;
+        };
+
+        space_en: space_en {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SPACE_EN";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&space_comma_en>, <&space_dot_en>;
+        };
+
+        space_ru: space_ru {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SPACE_RU";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&space_comma_ru>, <&space_dot_ru>;
+        };
+
+        b_en_curly_brackets: b_en_curly_brackets {
+            compatible = "zmk,behavior-tap-dance";
+            label = "B_EN_CURLY_BRACKETS";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
+        };
+
+        b_en_brackets: b_en_brackets {
+            compatible = "zmk,behavior-tap-dance";
+            label = "B_EN_BRACKETS";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+        };
+
+        b_en_parentness: b_en_parentness {
+            compatible = "zmk,behavior-tap-dance";
+            label = "B_EN_PARENTNESS";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp RPAR>;
+        };
+
+        b_en_less_grater: b_en_less_grater {
+            compatible = "zmk,behavior-tap-dance";
+            label = "B_EN_LESS_GRATER";
+            #binding-cells = <0>;
+            bindings = <&kp LT>, <&kp GT>;
+        };
+
+        b_ru_tilde_grave: b_ru_tilde_grave {
+            compatible = "zmk,behavior-tap-dance";
+            label = "B_RU_TILDE_GRAVE";
+            #binding-cells = <0>;
+            bindings = <&m_ru_tilde>, <&m_ru_grave>;
+        };
+
+        b_hash_numero: b_hash_numero {
+            compatible = "zmk,behavior-tap-dance";
+            label = "B_HASH_NUMERO";
+            #binding-cells = <0>;
+            bindings = <&m_ru_hash>, <&m_en_numero>;
+        };
+
+        b_ru_curly_brackets: b_ru_curly_brackets {
+            compatible = "zmk,behavior-tap-dance";
+            label = "B_RU_CURLY_BRACKETS";
+            #binding-cells = <0>;
+            bindings = <&m_ru_curly_bracket_open>, <&m_ru_curly_bracket_close>;
+        };
+
+        b_ru_brackets: b_ru_brackets {
+            compatible = "zmk,behavior-tap-dance";
+            label = "B_RU_BRACKETS";
+            #binding-cells = <0>;
+            bindings = <&m_ru_bracket_open>, <&m_ru_bracket_close>;
+        };
+
+        b_ru_parentness: b_ru_parentness {
+            compatible = "zmk,behavior-tap-dance";
+            label = "B_RU_PARENTNESS";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp RPAR>;
+        };
+
+        b_ru_less_greater: b_ru_less_greater {
+            compatible = "zmk,behavior-tap-dance";
+            label = "B_RU_LESS_GREATER";
+            #binding-cells = <0>;
+            bindings = <&m_ru_less>, <&m_ru_greater>;
+        };
+
+        b_en_tilde_grave: b_en_tilde_grave {
+            compatible = "zmk,behavior-tap-dance";
+            label = "B_EN_TILDE_GRAVE";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE>, <&kp GRAVE>;
+        };
     };
 
     combos {
         compatible = "zmk,combos";
 
-        kha {
-            bindings = <&kp RU_CYRILLIC_HA>;
-            key-positions = <6 7>;
-            layers = <1>;
-        };
-
-        hrdsgn {
-            bindings = <&kp RU_CYRILLIC_HARD_SIGN>;
-            key-positions = <7 8>;
-            layers = <1>;
-        };
-
-        cmben {
-            bindings = <&layer_en>;
+        switch_to_en {
+            bindings = <&to_en>;
             key-positions = <2 3>;
             layers = <1>;
         };
 
-        cmbru {
-            bindings = <&layer_ru>;
+        switch_to_ru {
+            bindings = <&to_ru>;
             key-positions = <2 3>;
             layers = <0>;
         };
     };
 
     macros {
-        to_ru: to_ru {
+        parentness: parentness {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(N2))>;
-            label = "TO_RU";
-            wait-ms = <0>;
-            tap-ms = <30>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+            label = "PARENTNESS";
+        };
+
+        brackets: brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT_ARROW>;
+            label = "BRACKETS";
+        };
+
+        curly_brackets: curly_brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
+            label = "CURLY_BRACKETS";
+        };
+
+        function: function {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F &kp U &kp N &kp C &kp T &kp I &kp O &kp N &kp SPACE &kp LPAR &kp RPAR &kp SPACE &kp LBRC &kp RET &kp LEFT_ARROW &kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
+            label = "FUNCTION";
+        };
+
+        ctrl_one: ctrl_one {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp N1>;
+            label = "CTRL_ONE";
+        };
+
+        ctrl_two: ctrl_two {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp NUMBER_2>;
+            label = "CTRL_TWO";
+        };
+
+        ctrl_three: ctrl_three {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp NUMBER_3>;
+            label = "CTRL_THREE";
+        };
+
+        ctrl_four: ctrl_four {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp NUMBER_4>;
+            label = "CTRL_FOUR";
+        };
+
+        ctrl_five: ctrl_five {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp N5>;
+            label = "CTRL_FIVE";
+        };
+
+        ctrl_six: ctrl_six {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp N6>;
+            label = "CTRL_SIX";
+        };
+
+        ctrl_seven: ctrl_seven {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp N7>;
+            label = "CTRL_SEVEN";
+        };
+
+        ctrl_eight: ctrl_eight {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp N8>;
+            label = "CTRL_EIGHT";
+        };
+
+        ctrl_nine: ctrl_nine {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp N9>;
+            label = "CTRL_NINE";
+        };
+
+        ctrl_zero: ctrl_zero {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp N0>;
+            label = "CTRL_ZERO";
+        };
+
+        space_comma_en: space_comma_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA &kp SPACE>;
+            label = "SPACE_COMMA_EN";
+        };
+
+        space_dot_en: space_dot_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp SPACE>;
+            label = "SPACE_DOT_EN";
+        };
+
+        space_comma_ru: space_comma_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_COMMA &kp SPACE>;
+            label = "SPACE_COMMA_RU";
+        };
+
+        space_dot_ru: space_dot_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_DOT &kp SPACE>;
+            label = "SPACE_DOT_RU";
         };
 
         to_en: to_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(N1))>;
+            bindings = <&kp LS(LALT) &to 0>;
             label = "TO_EN";
-            wait-ms = <0>;
-            tap-ms = <30>;
         };
 
-        layer_en: layer_en {
+        to_ru: to_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &to_en>;
-            label = "LAYER_EN";
-            wait-ms = <0>;
-            tap-ms = <30>;
+            bindings = <&kp LS(LALT) &to 1>;
+            label = "TO_RU";
         };
 
-        layer_ru: layer_ru {
+        m_ru_single_quote: m_single_quote {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 1 &to_ru>;
-            label = "LAYER_RU";
-            tap-ms = <30>;
-            wait-ms = <0>;
+            bindings = <&to_en &kp APOSTROPHE &to_ru>;
+            label = "M_SINGLE_QUOTE";
         };
 
-        en: en {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&to_en>,
-                <&macro_press>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&to_ru>;
+        m_ru_double_quote: m_double_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en &kp DOUBLE_QUOTES &to_ru>;
+            label = "M_DOUBLE_QUOTE";
+        };
 
-            label = "EN";
-            wait-ms = <0>;
-            tap-ms = <30>;
+        m_ru_curly_bracket_open: ru_curly_brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en &kp LEFT_BRACE &to_ru>;
+            label = "RU_CURLY_BRACKETS";
+        };
+
+        m_ru_curly_bracket_close: m_en_curly_bracket_close {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en &kp RIGHT_BRACE &to_ru>;
+            label = "M_EN_CURLY_BRACKET_CLOSE";
+        };
+
+        m_ru_bracket_open: ru_bracket_open {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en &kp LEFT_BRACKET &to_ru>;
+            label = "RU_BRACKET_OPEN";
+        };
+
+        m_ru_bracket_close: ru_bracket_close {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en &kp RIGHT_BRACKET &to_ru>;
+            label = "RU_BRACKET_CLOSE";
+        };
+
+        m_ru_tilde: m_tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en &kp TILDE &to_ru>;
+            label = "M_TILDE";
+        };
+
+        m_ru_grave: m_apos {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en &kp GRAVE &to_ru>;
+            label = "M_APOS";
+        };
+
+        m_ru_hash: m_en_hash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en &kp HASH &to_ru>;
+            label = "M_EN_HASH";
+        };
+
+        m_en_numero: m_en_numero {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_ru &kp RU_NUMERO &to_en>;
+            label = "M_EN_NUMERO";
+        };
+
+        m_ru_at: m_at {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en &kp AT_SIGN &to_ru>;
+            label = "M_AT";
+        };
+
+        m_ru_amp: m_amp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en &kp AMPERSAND &to_ru>;
+            label = "M_AMP";
+        };
+
+        m_ru_caret: m_caret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en &kp CARET &to_ru>;
+            label = "M_CARET";
+        };
+
+        m_ru_dollar: m_ru_dollar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en &kp DOLLAR &to_ru>;
+            label = "M_RU_DOLLAR";
+        };
+
+        m_ru_pipe: m_ru_pipe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en &kp PIPE &to_ru>;
+            label = "M_RU_PIPE";
+        };
+
+        m_ru_greater: m_ru_greater {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en &kp GREATER_THAN &to_ru>;
+            label = "M_RU_GREATER";
+        };
+
+        m_ru_less: b_less_than {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en &kp LESS_THAN &to_ru>;
+            label = "B_LESS_THAN";
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        en {
+        en_layout {
             bindings = <
-  &kp Q        &kp W        &kp E         &kp R          &kp T                          &kp Y  &kp U         &kp I         &kp O        &kp P
-  &hml LGUI A  &hml LALT S  &hml LSHFT D  &hml LCTRL F   &kp G                          &kp H  &hmr RCTRL J  &hmr RSHFT K  &hmr LALT L  &hmr RGUI SEMICOLON
-  &kp Z        &kp X        &kp C         &kp V          &kp B                          &kp N  &kp M         &kp COMMA     &kp DOT      &kp SQT
-                                          &kp BACKSPACE  &mo 4  &kp SPACE    &kp ENTER  &mo 2  &kp TAB
+  &kp Q        &kp W         &kp E              &kp R            &kp T                                &kp Y  &kp U            &kp I         &kp O         &kp P
+  &hml LGUI A  &hml LCTRL S  &hml LEFT_SHIFT D  &hml LALT F      &kp G                                &kp H  &hmr LEFT_ALT J  &hmr LSHFT K  &hmr LCTRL L  &hmr LGUI LEFT_GUI
+  &kp Z        &kp X         &kp C              &kp V            &mt ESC B                            &kp N  &kp M            &none         &none         &none
+                                                &lt 4 BACKSPACE  &mo 2      &space_en    &lt 6 ENTER  &mo 5  &kp TAB
             >;
 
-            display-name = "Base";
+            display-name = "en_layout";
         };
 
-        ru {
+        ru_layout {
+            display-name = "ru_layout";
             bindings = <
-  &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE         &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_KA        &kp RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA        &kp RU_CYRILLIC_SHCHA     &kp RU_CYRILLIC_ZE
-  &hml LGUI RU_CYRILLIC_EF  &hml LALT RU_CYRILLIC_YERU  &hml LSHFT RU_CYRILLIC_VE  &hml LCTRL RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                          &kp RU_CYRILLIC_ER  &hmr RCTRL RU_CYRILLIC_O   &hmr RSHFT RU_CYRILLIC_EL  &hmr LALT RU_CYRILLIC_DE  &hmr RGUI RU_CYRILLIC_ZHE
-  &kp RU_CYRILLIC_YA        &kp RU_CYRILLIC_CHE         &kp RU_CYRILLIC_ES         &kp RU_CYRILLIC_EM        &kp RU_CYRILLIC_I                           &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE         &kp RU_CYRILLIC_YU        &kp RU_CYRILLIC_E
-                                                                                   &kp BACKSPACE             &mo 4               &kp SPACE    &kp ENTER  &mo 3               &kp TAB
+  &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE          &kp RU_CYRILLIC_U           &kp RU_CYRILLIC_KA           &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                            &kp RU_CYRILLIC_EN  &mt RU_CYRILLIC_HA RU_CYRILLIC_GHE               &kp RU_CYRILLIC_SHA        &kp RU_CYRILLIC_SHCHA     &kp RU_CYRILLIC_ZE
+  &hml LGUI RU_CYRILLIC_EF  &hml LCTRL RU_CYRILLIC_YERU  &hml LSHIFT RU_CYRILLIC_VE  &hml LEFT_ALT RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                                           &kp RU_CYRILLIC_ER  &hmr LEFT_ALT RU_CYRILLIC_O                      &hmr LSHFT RU_CYRILLIC_EL  &mt LCTRL RU_CYRILLIC_DE  &mt LGUI RU_CYRILLIC_ZHE
+  &kp RU_CYRILLIC_YA        &kp RU_CYRILLIC_CHE          &kp RU_CYRILLIC_ES          &kp RU_CYRILLIC_EM           &mt ESC RU_CYRILLIC_I                                        &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE         &kp RU_CYRILLIC_YU        &kp RU_CYRILLIC_E
+                                                                                     &lt 4 BACKSPACE              &mo 3                              &space_ru    &lt 6 ENTER  &mo 5               &kp TAB
             >;
-
-            display-name = "Ru";
         };
 
-        sym_en {
+        symbols_en {
             bindings = <
-  &kp TILDE       &kp LT          &kp EQUAL         &kp GT           &kp GRAVE                    &kp CARET  &kp LBKT         &kp UNDER        &kp RBKT        &kp DLLR
-  &hml LGUI BSLH  &hml LALT LPAR  &hml LSHFT MINUS  &hml LCTRL RPAR  &kp PLUS                     &kp PRCNT  &hmr RCTRL LBRC  &hmr RSHFT SEMI  &hmr LALT RBRC  &hmr RGUI EXCL
-  &kp HASH        &kp STAR        &kp COLON         &kp FSLH         &kp AMPS                     &kp AT     &kp PIPE         &kp COMMA        &kp DOT         &kp QMARK
-                                                    &trans           &mo 5      &trans    &trans  &none      &trans
+  &kp UNDER  &kp EXCL          &kp AT_SIGN     &b_hash_numero        &kp DOLLAR                         &kp PRCNT  &kp CARET  &kp AMPERSAND  &kp ASTRK          &none
+  &none      &b_en_parentness  &b_en_brackets  &b_en_curly_brackets  &b_en_less_grater                  &kp PLUS   &kp MINUS  &kp EQUAL      &kp QMARK          &kp PIPE
+  &none      &kp SEMI          &kp COLON       &b_en_tilde_grave     &kp BSLH                           &kp FSLH   &kp DOT    &kp COMMA      &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE
+                                               &none                 &none              &none    &none  &none      &none
             >;
-
-            display-name = "Symbols";
         };
 
-        sym_ru {
+        symbols_ru {
             bindings = <
-  &en TILDE               &en LT          &kp EQUAL         &en GT           &en GRAVE                    &en CARET  &en LBKT  &kp UNDER           &en RBKT    &en DLLR
-  &hml LGUI RU_BACKSLASH  &hml LALT LPAR  &hml LSHFT MINUS  &hml LCTRL RPAR  &kp PLUS                     &kp PRCNT  &en LBRC  &hmr RSHFT RU_SEMI  &en RBRC    &hmr RGUI EXCL
-  &en HASH                &kp STAR        &kp RU_COLON      &kp RU_FSLH      &en AMPS                     &en AT     &en PIPE  &kp RU_COMMA        &kp RU_DOT  &kp RU_QMARK
-                                                            &trans           &mo 5      &trans    &trans  &none      &trans
+  &kp RU_UNDERSCORE  &kp EXCL          &m_ru_at        &b_hash_numero        &m_ru_dollar                        &kp PRCNT     &m_ru_caret  &m_ru_amp     &kp ASTRK           &none
+  &none              &b_ru_parentness  &b_ru_brackets  &b_ru_curly_brackets  &b_ru_less_greater                  &kp PLUS      &kp MINUS    &kp EQUAL     &kp RU_QUESTION     &m_ru_pipe
+  &none              &kp RU_SEMI       &kp RU_COLON    &b_ru_tilde_grave     &kp RU_BACKSLASH                    &kp RU_SLASH  &kp RU_DOT   &kp RU_COMMA  &m_ru_double_quote  &m_ru_single_quote
+                                                       &none                 &none               &none    &none  &none         &none
             >;
-
-            display-name = "Symbols";
         };
 
-        nav {
+        nums_and_fns {
             bindings = <
-  &kp N1         &kp N2    &kp N3     &kp N4     &kp N5                        &kp N6           &kp N7           &kp N8           &kp N9        &kp N0
-  &hml LGUI ESC  &kp LALT  &kp LSHFT  &kp LCTRL  &kp ENTER                     &kp PRINTSCREEN  &hmr RCTRL LEFT  &hmr RSHFT DOWN  &hmr LALT UP  &hmr RGUI RIGHT
-  &layer_en      &kp HOME  &kp INS    &kp END    &kp DELETE                    &kp CAPS         &none            &kp PG_DN        &kp PG_UP     &layer_ru
-                                      &trans     &none       &trans    &trans  &mo 5            &trans
+  &kp HOME       &ctrl_1  &ctrl_2  &ctrl_3  &kp END                        &kp F1   &kp F2   &kp F3         &kp F4  &kp F5
+  &mt LGUI LCMD  &ctrl_4  &ctrl_5  &ctrl_6  &ctrl_0                        &kp F6   &kp F7   &mt LSHIFT F8  &kp F9  &mt F10 LGUI
+  &kp PAGE_DOWN  &ctrl_7  &ctrl_8  &ctrl_9  &mt ESC PG_UP                  &kp F11  &kp F12  &none          &none   &none
+                                   &none    &none          &none    &none  &none    &none
             >;
+        };
 
-            display-name = "Nav";
+        navigation_media {
+            bindings = <
+  &none  &kp C_PREV    &kp C_PLAY_PAUSE   &kp C_NEXT    &none                        &none  &kp PRINTSCREEN  &kp UP    &none      &none
+  &none  &kp C_VOL_DN  &mt LSHIFT C_MUTE  &kp C_VOL_UP  &none                        &none  &kp LEFT         &kp DOWN  &kp RIGHT  &none
+  &none  &none         &none              &none         &kp ESC                      &none  &kp HOME         &none     &kp END    &none
+                                          &none         &none    &kp SPACE    &none  &none  &none
+            >;
+        };
+
+        macro_bt {
+            bindings = <
+  &bt BT_CLR  &none        &none      &none                 &none                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+  &none       &parentness  &brackets  &b_en_curly_brackets  &none                  &none         &function     &none         &none         &none
+  &none       &none        &none      &none                 &none                  &none         &none         &none         &out OUT_USB  &out OUT_BLE
+                                      &none                 &none  &none    &none  &none         &none
+            >;
         };
 
         adj {
             bindings = <
-  &bootloader  &kp F1        &kp F2         &kp F3         &kp F4                     &bt BT_SEL 0  &bt BT_SEL 1         &bt BT_SEL 2       &bt BT_SEL 3        &bt BT_CLR
-  &kp LGUI     &hml LALT F5  &hml LSHFT F6  &hml LCTRL F7  &kp F8                     &out OUT_BLE  &hmr RCTRL C_VOL_DN  &hmr RSHFT C_MUTE  &hmr LALT C_VOL_UP  &kp RGUI
-  &none        &kp F9        &kp F10        &kp F11        &kp F12                    &out OUT_USB  &kp C_PREV           &kp C_PP           &kp C_NEXT          &studio_unlock
-                                            &trans         &trans   &trans    &trans  &trans        &trans
+  &bootloader  &kp F1  &kp F2   &kp F3   &kp F4                     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR
+  &kp LGUI     &none   &none    &none    &kp F8                     &out OUT_BLE  &none         &none         &none         &kp RGUI
+  &kp N1       &kp F9  &kp F10  &kp F11  &kp F12                    &out OUT_USB  &kp C_PREV    &kp C_PP      &kp C_NEXT    &studio_unlock
+                                &trans   &trans   &trans    &trans  &trans        &trans
             >;
 
             display-name = "Adjust";
