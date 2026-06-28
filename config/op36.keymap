@@ -196,6 +196,18 @@
             key-positions = <2 3>;
             layers = <0>;
         };
+
+        game_mode_on {
+            bindings = <&tog 8>;
+            key-positions = <2 4 0>;
+            layers = <0 1>;
+        };
+
+        game_mode_off {
+            bindings = <&tog 8>;
+            key-positions = <0 2 4>;
+            layers = <8>;
+        };
     };
 
     macros {
