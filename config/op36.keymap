@@ -515,10 +515,10 @@
 
         nums_and_fns {
             bindings = <
-  &kp HOME       &ctrl_1  &ctrl_2  &ctrl_3  &kp END                        &kp F1   &kp F2   &kp F3         &kp F4  &kp F5
-  &mt LGUI LCMD  &ctrl_4  &ctrl_5  &ctrl_6  &ctrl_0                        &kp F6   &kp F7   &mt LSHIFT F8  &kp F9  &mt F10 LGUI
-  &kp PAGE_DOWN  &ctrl_7  &ctrl_8  &ctrl_9  &mt ESC PG_UP                  &kp F11  &kp F12  &none          &none   &none
-                                   &none    &none          &none    &none  &none    &none
+  &kp HOME       &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp END                        &kp F1   &kp F2   &kp F3         &kp F4  &kp F5
+  &mt LGUI LCMD  &kp NUMBER_4  &kp NUMBER_5  &kp N6        &kp N0                         &kp F6   &kp F7   &mt LSHIFT F8  &kp F9  &mt F10 LGUI
+  &kp PAGE_DOWN  &kp N7        &kp N8        &kp N9        &mt ESC PG_UP                  &kp F11  &kp F12  &none          &none   &none
+                                             &none         &none          &none    &none  &none    &none
             >;
         };
 
