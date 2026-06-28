@@ -538,5 +538,14 @@
 
             display-name = "Adjust";
         };
+
+        gaming {
+            bindings = <
+  &kp N1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                          &kp N6     &kp RU_N7       &kp RU_N8  &kp RU_N9        &kp N0
+  &none   &kp Q         &kp W         &kp E         &none                                 &none      &none           &kp UP     &none            &none
+  &none   &kp A         &kp S         &kp D         &kp F                                 &none      &kp LEFT        &kp DOWN   &kp RIGHT_ARROW  &none
+                                      &kp LSHIFT    &kp SPACE     &kp LCTRL    &kp LCTRL  &kp SPACE  &kp LEFT_SHIFT
+            >;
+        };
     };
 };
