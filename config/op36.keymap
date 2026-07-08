@@ -187,13 +187,13 @@
 
         switch_to_en {
             bindings = <&to_en>;
-            key-positions = <2 3>;
+            key-positions = <20 29>;
             layers = <1>;
         };
 
         switch_to_ru {
             bindings = <&to_ru>;
-            key-positions = <2 3>;
+            key-positions = <20 29>;
             layers = <0>;
         };
 
