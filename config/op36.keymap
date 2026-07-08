@@ -505,7 +505,7 @@
   &kp UNDER     &kp EXCL       &kp AT_SIGN     &kp HASH              &kp DOLLAR                         &kp PRCNT  &kp CARET  &kp AMPERSAND  &kp ASTRK          &none
   &m_en_numero  &b_parentness  &b_en_brackets  &b_en_curly_brackets  &b_en_less_grater                  &kp PLUS   &kp MINUS  &kp EQUAL      &kp QMARK          &kp PIPE
   &none         &kp SEMI       &kp COLON       &b_en_tilde_grave     &kp BSLH                           &kp FSLH   &kp DOT    &kp COMMA      &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE
-                                               &none                 &none              &none    &none  &none      &none
+                                               &lt 4 BACKSPACE       &none              &none    &none  &none      &none
             >;
         };
 
@@ -514,7 +514,7 @@
   &kp RU_UNDERSCORE  &kp EXCL       &m_ru_at        &m_ru_hash            &m_ru_dollar                        &kp PRCNT     &m_ru_caret  &m_ru_amp     &kp ASTRK           &none
   &kp RU_NUMERO      &b_parentness  &b_ru_brackets  &b_ru_curly_brackets  &b_ru_less_greater                  &kp PLUS      &kp MINUS    &kp EQUAL     &kp RU_QUESTION     &m_ru_pipe
   &none              &kp RU_SEMI    &kp RU_COLON    &b_ru_tilde_grave     &kp RU_BACKSLASH                    &kp RU_SLASH  &kp RU_DOT   &kp RU_COMMA  &m_ru_double_quote  &m_ru_single_quote
-                                                    &none                 &none               &none    &none  &none         &none
+                                                    &lt 4 BACKSPACE       &none               &none    &none  &none         &none
             >;
         };
 
@@ -523,7 +523,7 @@
   &kp HOME       &kp N1        &kp NUMBER_2  &kp NUMBER_3  &kp END                                       &kp F1         &kp F2        &kp F3  &kp F4  &kp F5
   &mt LGUI LCMD  &kp NUMBER_4  &kp NUMBER_5  &kp N6        &kp N0                                        &kp F6         &kp F7        &kp F8  &kp F9  &mt F10 LGUI
   &kp PG_UP      &kp N7        &kp N8        &kp N9        &kp PAGE_DOWN                                 &kp F11        &kp F12       &none   &none   &none
-                                             &none         &none          &none    &mt LEFT_SHIFT ENTER  &mt LCTRL ESC  &mt LALT TAB
+                                             &none         &mo 2          &none    &mt LEFT_SHIFT ENTER  &mt LCTRL ESC  &mt LALT TAB
             >;
         };
 
