@@ -5,7 +5,11 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
-&mt { tapping-term-ms = <300>; };
+&mt {
+    tapping-term-ms = <300>;
+    flavor = "balanced";
+    quick-tap-ms = <175>;
+};
 
 / {
     behaviors {
