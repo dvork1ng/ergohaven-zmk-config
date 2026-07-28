@@ -3,6 +3,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &mt { tapping-term-ms = <300>; };
 
@@ -350,10 +351,10 @@
 
         macro_bt {
             bindings = <
-  &bt BT_CLR  &none  &none  &none  &none                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-  &none       &none  &none  &none  &none                  &none         &none         &none         &none         &none
-  &none       &none  &none  &none  &none                  &none         &none         &none         &out OUT_USB  &out OUT_BLE
-                            &none  &none  &none    &none  &none         &none
+  &bt BT_CLR  &none           &mmv MOVE_UP    &none            &none                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+  &none       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none                  &none         &none         &none         &none         &none
+  &none       &none           &none           &none            &none                  &none         &none         &none         &out OUT_USB  &out OUT_BLE
+                                              &none            &none  &none    &none  &none         &none
             >;
         };
     };
