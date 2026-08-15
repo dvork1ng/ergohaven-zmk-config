@@ -162,13 +162,13 @@
 
         switch_to_en {
             bindings = <&to_en>;
-            key-positions = <16 17 18 19>;
+            key-positions = <30 32>;
             layers = <1>;
         };
 
         switch_to_ru {
             bindings = <&to_ru>;
-            key-positions = <16 17 18 19>;
+            key-positions = <30 32>;
             layers = <0>;
         };
 
